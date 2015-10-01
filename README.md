@@ -12,3 +12,6 @@ Just import the mathtools module. Each function is described in the code comment
 * `fib`: Calculates the n value of the fibonacci sequence.
 * `geometric`: Calculates the sum of a geometric serie. 
 * `arithmetic`: Calculates the sum of an arithmetic serie.
+
+##How to test this 
+Run the test.py
