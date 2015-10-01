@@ -23,7 +23,38 @@ def test_isPrime():
     else:
         print ("FOUND ", fails, " ERRORS")
 
-functions = ('isPrime')
+
+def test_factorial():
+    print "Testing factorial "
+    fails = 0
+    factorials = [(5, 120), (10, 3628800), (7, 5040), (12, 479001600)]
+    for f in factorials:
+        if mathtools.factorial(f[0]) == f[1]:
+            print '+ ',  # Pass the test
+        else:
+            fails += 1
+            print '- ',
+    if not fails:
+        print "TEST OK"
+    else:
+        print "FOUND ", fails, " ERRORS"
+
+def test_fib():
+    print "Testing fib "
+    fails = 0
+    fib = [(1, 1), (0, 0), (3, 2), (4, 3), (6, 8), (7, 13), (20, 6765)]
+    for f in fib:
+        if mathtools.fib(f[0]) == f[1]:
+            print '+ ',  # Pass the test
+        else:
+            fails += 1
+            print '- ',
+    if not fails:
+        print "TEST OK"
+    else:
+        print "FOUND ", fails, " ERRORS"
+
+functions = ('isPrime', 'factorial', 'fib')
 for f in functions:
     if hasattr(mathtools, f):
         globals()['test_'+f]()
